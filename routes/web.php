@@ -13,6 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Default Route
 Route::get('/', function () {
-    return view('welcome');
+    if(Auth::check() == true){
+        return redirect('to-do');
+    }
+    return view('login');
 });
+
+
+//Route to login with credentials
+Route::post('/', 'App\Http\Controllers\LoginController@loginFunction')->name('userLogin');
+
+
+//Default Logout Route
+Route::get('/logout', function() {
+    if(session()->has('userEmail')){
+        session()->forget(['userEmail', 'userName']);
+        Auth::logout();
+    }
+    return redirect('/');    
+});
+
+
+//Route to get the To Do's view
+Route::get('to-do', 'App\Http\Controllers\ToDoController@index');

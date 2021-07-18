@@ -14,10 +14,10 @@ class CreateTodoTable extends Migration
     public function up()
     {
         Schema::create('todo', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+            $table->increments('id');
+            $table->string('description');
             $table->tinyInteger('status');
-            $table->unsignedInteger('user_id');
+            $table->unsignedBigInteger('users_id');
             $table->unsignedInteger('folder_id')->nullable();
 
             $table->index('users_id','fk_todo_users1_idx');

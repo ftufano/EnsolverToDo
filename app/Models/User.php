@@ -40,4 +40,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Database Relationships.
+     */
+    
+    public function folder()
+    {
+        return $this->hasMany(Folder::class);
+    }
+    
+    public function todo()
+    {
+        return $this->hasMany(ToDo::class);
+    }
 }

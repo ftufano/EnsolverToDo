@@ -14,13 +14,13 @@ class CreateFolderTable extends Migration
     public function up()
     {
         Schema::create('folder', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name');
-            $table->unsignedInteger('user_id');
+            $table->unsignedBigInteger('users_id');
 
-            $table->index('user_id','fk_folder_user1_idx');
+            $table->index('users_id','fk_folder_users1_idx');
 		
-		    $table->foreign('user_id')
+		    $table->foreign('users_id')
 		        ->references('id')->on('users');
 
             $table->timestamps();

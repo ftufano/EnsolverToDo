@@ -178,6 +178,7 @@
                                           @csrf
                                           <td class="cm-tbl-dsp" id="toDoId">
                                             <input type="hidden" name="id" id="toDoSttsID" value="{{ $toDo->id }}">
+                                            <input type="hidden" name="folder_name" id="toDoFldrNm" value="{{ $toDo->folder_id }}">
                                           </td>
                                           <td id="toDoStatus">
                                             <div class="form-check">
@@ -311,7 +312,7 @@
                   </div>
                 
                 @else
-                  <h1 class="h1 mb-2 text-gray-800 cm-h1-mrg">@lang('There are no folders created')</h1>
+                  <h1 class="h1 mb-2 text-gray-800 cm-h1-mrg">@lang('There are no folders created, Please the defaul folder with the specific name "Folderless To-Dos"')</h1>
                 @endif
 
               </div>

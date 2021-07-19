@@ -14,7 +14,7 @@ class Folder extends Model
      *
      * @var string
      */
-    protected $table = 'order_list';
+    protected $table = 'folder';
 
     /**
      * The attributes that are mass assignable.

@@ -29,7 +29,7 @@ class LoginController extends Controller
 
                 Auth::login($user, $request->filled('remember'));
 
-                $request->session()->put(['userEmail'=>$user->email, 'userName'=>$user->name]);
+                $request->session()->put(['userID'=>$user->id, 'userEmail'=>$user->email, 'userName'=>$user->name]);
                 //create a new session and putting as session values the user's email, name and type
 
                 return redirect('to-do'); //after create the session redirect to the backusers route

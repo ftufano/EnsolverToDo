@@ -15,7 +15,7 @@ class CreateFolderTable extends Migration
     {
         Schema::create('folder', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name')->unique();
             $table->unsignedBigInteger('users_id');
 
             $table->index('users_id','fk_folder_users1_idx');

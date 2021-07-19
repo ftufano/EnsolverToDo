@@ -150,3 +150,8 @@
 .cm-tbl-dsp{
     display: none;
 }
+
+/*Center no-folder warn*/
+.cm-h1-mrg {
+    margin: 25vh auto;
+}

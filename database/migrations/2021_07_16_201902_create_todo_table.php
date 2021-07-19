@@ -18,7 +18,7 @@ class CreateTodoTable extends Migration
             $table->string('description');
             $table->tinyInteger('status');
             $table->unsignedBigInteger('users_id');
-            $table->unsignedInteger('folder_id')->nullable();
+            $table->unsignedInteger('folder_id');
 
             $table->index('users_id','fk_todo_users1_idx');
 		    $table->index('folder_id','fk_todo_folder1_idx');

@@ -10,6 +10,11 @@ Caelum Dev Images and other resources are from my own entrepreneurship
 
 The app is up and running on the internet...You can access the app [here](https://ensolvers.caelumdev.com/).
 
+The App credentials are
+
+- email: testensolvers@mail.com
+- password: 4321
+
 ## Features
 
 - Responsive Design

@@ -1,6 +1,6 @@
 # To-Do App
 
-This is a Laravel-based App where was developed the Back End with the APIs as the No- Framework Front End
+This is a Laravel-based App for create and manage To-Dos, where was developed the Back End with the APIs as the No- Framework Front End
 
 Developed By Francesco Tufano
 

@@ -41,21 +41,39 @@ Install the dependencies and devDependencies and start the server. You will need
 composer install
 ```
 
-Then access to the project through localhost URL, if you reach it, will ask to generate the app key.
+If you use 8.0 or above you , you can do so on your CLI by typing...
 
-Then you will need to create the database only on your DB gestor, after that you will need to run the migrations, for that, get back to the CLI and type...
+```sh
+composer update
+```
+
+Then look for the .env.example file which is on the root of the project, create a copy of it on the same root, then change the name to .env
+
+Then you will need to create the database, for that, go to the project CLI and type...
+
+```sh
+php artisan db:create laravel
+```
+
+Then you will need to run the migrations in order to create the tables and their structures, for that, get back to the CLI and type...
 
 ```sh
 php artisan migrate
 ```
 
-You will need to manually create the DB user in order to access through to the app login, fill the following fields only
+Then you will need seed the DB users table with the previous mentioned default user in order to have access on the app's login, for that, get back to the CLI and type...
 
-- name
-- email
-- password
-- created_at (you can put today's date and hour)
-- updated_at (same as created_at)
+```sh
+php artisan db:seed
+```
+
+Then get back to the CLI and start the app server by typing...
+
+```sh
+php artisan serve
+```
+
+Then access to the project through localhost URL, if you reach it, will ask to generate the app key.
 
 And that's it, you're ready to go
 

@@ -79,5 +79,5 @@ And that's it, you're ready to go
 
 ## Extras
 
-Added EER Diagram made on MySQL Workbench reffering to DB Diagram.
+Added EER Diagram made on MySQL Workbench reffering to DB Diagram in path resources/extra_files/Ensolver To Do.mwb.
 
